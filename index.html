@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat World 🐱</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffc3e6, #c9b6ff, #a6e6ff);
+    background-size: 300% 300%;
+    animation: bg 8s infinite alternate;
+    color: #4b285b;
+    text-align: center;
+}
+
+@keyframes bg {
+    from { background-position: 0% 0%; }
+    to { background-position: 100% 100%; }
+}
+
+header {
+    padding: 25px;
+    background: rgba(255,255,255,0.4);
+    animation: slide 1s ease;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #592c72;
+    margin: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff3399;
+}
+
+.hero {
+    padding: 65px 20px;
+}
+
+.hero h2 {
+    font-size: 45px;
+    animation: appear 2s ease;
+}
+
+.hero p {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.cat {
+    font-size: 100px;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+button {
+    padding: 13px 30px;
+    background: #ff69b4;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #ff69b4;
+}
+
+.cats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 220px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #9975a0;
+    transition: 0.4s;
+    animation: appear 2s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px) rotate(2deg);
+}
+
+.card .emoji {
+    font-size: 60px;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+footer {
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🐱 CAT WORLD 🐾</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Cats</a>
+        <a href="#types">Cat Types</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="cat">🐈</div>
+    <h2>Welcome to Cat World!</h2>
+    <p>A wonderful place for people who love cats! 💗</p>
+    <button onclick="welcome()">Click Me!</button>
+</section>
+
+<section id="about">
+    <h2>💗 ABOUT CATS 💗</h2>
+    <p style="padding:20px; max-width:700px; margin:auto;">
+        Cats are cute, playful, and intelligent animals.
+        They are popular pets around the world.
+        Cats love sleeping, playing, exploring, and spending
+        time with their favorite humans!
+    </p>
+</section>
+
+<section id="types">
+    <h2>🐾 TYPES OF CATS 🐾</h2>
+
+    <div class="cats">
+
+        <div class="card">
+            <div class="emoji">🐈</div>
+            <h3>Persian Cat</h3>
+            <p>Fluffy, calm, and adorable.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🐈‍⬛</div>
+            <h3>Black Cat</h3>
+            <p>Beautiful, mysterious, and playful.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🐱</div>
+            <h3>Siamese Cat</h3>
+            <p>Social, smart, and talkative.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>🐾 Thank You for Visiting Cat World! 🐾</h3>
+    <p>Made with ❤️ for cat lovers.</p>
+    <p>© 2026 Cat World</p>
+</footer>
+
+<script>
+function welcome() {
+    alert("Meow! 🐱 Welcome to Cat World! 💗");
+}
+</script>
+
+</body>
+</html>
